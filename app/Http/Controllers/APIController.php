@@ -17,7 +17,7 @@ class APIController extends Controller
             new Client(),
             $config
         );
-        $id = "ebe1c40f-bb69-49d5-9e93-68e3e23da521";
+        $id = "fe82a7b6-beda-4b1b-a405-f37bdff4b55a";
 
         try {
             $result = $apiInstance->getIdentityById($id);
