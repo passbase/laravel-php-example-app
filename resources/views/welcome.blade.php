@@ -122,7 +122,7 @@
         </p>
 
         <!-- 1.2. This is a link to your url-->
-        <a class="hosted-link-button" href="" alt="" target="_blank">Custom Link</a>
+        <a class="hosted-link-button" href="{{ \App\Http\Controllers\WelcomeController::encode_personal_link() }}" alt="" target="_blank">Custom Link</a>
     </div>
 
     <script type="text/javascript">
