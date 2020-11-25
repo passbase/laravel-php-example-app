@@ -9,7 +9,6 @@ use Passbase\api\IdentityApi;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
-
 class WebhookController extends Controller
 {
     protected $apiInstance;
@@ -42,18 +41,20 @@ class WebhookController extends Controller
 
     private function process_verification_completed($webhook)
     {
-        echo "VERIFICATION_COMPLETED";
+        error_log("VERIFICATION_COMPLETED");
     }
 
     private function process_verification_reviewed($webhook)
     {
+        error_log("VERIFICATION_REVIEWED");
         $details = $this->get_identity_for_id($webhook['key']);
         $this->update_verification_status($details);
     }
 
     private function update_verification_status($details)
     {
-        print_r($details);
+        error_log($details);
+
         // Update status of user in your db 
         $email = $details['owner']['email'];
         $status = $details['status'];

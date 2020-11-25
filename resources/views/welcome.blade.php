@@ -142,7 +142,7 @@
 
 
         // You can prefill your user's email here to skip the step. Left empty for demo
-        const userEmail = "paul@test.com"
+        const userEmail = ""
 
         Passbase.renderButton(element, apiKey, {
             prefillAttributes: {
